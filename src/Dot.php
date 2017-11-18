@@ -32,10 +32,11 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     /**
      * Create a new Dot instance
      *
-     * @param mixed $items
+     * @param loading a file containing array of mixed $items
      */
-    public function __construct($items = [])
+    public function __construct($file)
     {
+        $load = include($file);
         $this->items = $this->getArrayItems($items);
     }
 
