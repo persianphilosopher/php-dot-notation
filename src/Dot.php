@@ -37,7 +37,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
     public function __construct($file)
     {
         $load = include($file);
-        $this->items = $this->getArrayItems($items);
+        $this->items = $this->getArrayItems($load);
     }
 
     /**
